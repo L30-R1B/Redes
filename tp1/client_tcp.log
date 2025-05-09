@@ -1,0 +1,70 @@
+[2025-05-09 18:37:33] Transferência concluída:
+  Servidor: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 100 bytes
+  Tempo: 0.000022 segundos
+  Velocidade: 4343.56 KB/s
+  MD5 recebido: 25758c322dca0e1e45d9262fc5c672aa
+  MD5 calculado: 25758c322dca0e1e45d9262fc5c672aa
+  Status: OK
+----------------------------------------
+[2025-05-09 18:37:40] Transferência concluída:
+  Servidor: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 100 bytes
+  Tempo: 0.000011 segundos
+  Velocidade: 8568.59 KB/s
+  MD5 recebido: 25758c322dca0e1e45d9262fc5c672aa
+  MD5 calculado: 25758c322dca0e1e45d9262fc5c672aa
+  Status: OK
+----------------------------------------
+[2025-05-09 18:43:11] Transferência concluída:
+  Servidor: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 0 bytes
+  Tempo: 0.000000 segundos
+  Velocidade: 0.00 KB/s
+  MD5 recebido: d41d8cd98f00b204e9800998ecf8427e
+  MD5 calculado: d41d8cd98f00b204e9800998ecf8427e
+  Status: OK
+----------------------------------------
+[2025-05-09 18:43:28] Transferência concluída:
+  Servidor: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 55 bytes
+  Tempo: 0.000013 segundos
+  Velocidade: 4007.68 KB/s
+  MD5 recebido: 3e5e36ec8162d18115ae831923bc2edb
+  MD5 calculado: 3e5e36ec8162d18115ae831923bc2edb
+  Status: OK
+----------------------------------------
+[2025-05-09 18:43:32] Transferência concluída:
+  Servidor: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 55 bytes
+  Tempo: 0.000009 segundos
+  Velocidade: 5781.59 KB/s
+  MD5 recebido: 3e5e36ec8162d18115ae831923bc2edb
+  MD5 calculado: 3e5e36ec8162d18115ae831923bc2edb
+  Status: OK
+----------------------------------------
+[2025-05-09 18:43:37] Transferência concluída:
+  Servidor: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 55 bytes
+  Tempo: 0.000010 segundos
+  Velocidade: 5435.23 KB/s
+  MD5 recebido: 3e5e36ec8162d18115ae831923bc2edb
+  MD5 calculado: 3e5e36ec8162d18115ae831923bc2edb
+  Status: OK
+----------------------------------------
+[2025-05-09 18:43:55] Transferência concluída:
+  Servidor: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 0 bytes
+  Tempo: 15.246133 segundos
+  Velocidade: 0.00 KB/s
+  MD5 recebido: 3e5e36ec8162d18115ae831923bc2edb
+  MD5 calculado: Transferência incompleta
+  Status: FALHA
+----------------------------------------

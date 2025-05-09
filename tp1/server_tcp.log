@@ -1,0 +1,64 @@
+[2025-05-09 18:37:33] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 100 bytes
+  Tempo: 0.000049 segundos
+  Velocidade: 1986.30 KB/s
+  MD5: 25758c322dca0e1e45d9262fc5c672aa
+----------------------------------------
+[2025-05-09 18:37:40] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 100 bytes
+  Tempo: 0.000054 segundos
+  Velocidade: 1807.51 KB/s
+  MD5: 25758c322dca0e1e45d9262fc5c672aa
+----------------------------------------
+[2025-05-09 18:37:45] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 100 bytes
+  Tempo: 0.000012 segundos
+  Velocidade: 8212.62 KB/s
+  MD5: 25758c322dca0e1e45d9262fc5c672aa
+----------------------------------------
+[2025-05-09 18:43:11] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 0 bytes
+  Tempo: 0.000009 segundos
+  Velocidade: 0.00 KB/s
+  MD5: d41d8cd98f00b204e9800998ecf8427e
+----------------------------------------
+[2025-05-09 18:43:28] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 55 bytes
+  Tempo: 0.000035 segundos
+  Velocidade: 1544.70 KB/s
+  MD5: 3e5e36ec8162d18115ae831923bc2edb
+----------------------------------------
+[2025-05-09 18:43:32] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 55 bytes
+  Tempo: 0.000038 segundos
+  Velocidade: 1403.88 KB/s
+  MD5: 3e5e36ec8162d18115ae831923bc2edb
+----------------------------------------
+[2025-05-09 18:43:37] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 55 bytes
+  Tempo: 0.000038 segundos
+  Velocidade: 1426.09 KB/s
+  MD5: 3e5e36ec8162d18115ae831923bc2edb
+----------------------------------------
+[2025-05-09 18:43:40] Transferência concluída:
+  Cliente: 127.0.0.1
+  Arquivo: t.txt
+  Tamanho: 55 bytes
+  Tempo: 0.000012 segundos
+  Velocidade: 4540.62 KB/s
+  MD5: 3e5e36ec8162d18115ae831923bc2edb
+----------------------------------------
