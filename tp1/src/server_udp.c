@@ -142,7 +142,6 @@ void send_file(int sockfd, struct sockaddr_in client_addr, const char *filename,
               (struct sockaddr *)&client_addr, sizeof(client_addr));
         
         packet_counter++;
-        usleep(1000); 
     }
 
     clock_gettime(CLOCK_MONOTONIC, &end);
