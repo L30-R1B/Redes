@@ -17,7 +17,7 @@
 #define PORT 8080
 #define LOG_FILE "server_udp.log"
 #define MAX_PATH_LEN 1024
-#define HEADER_SIZE 5  // 4 bytes para número do pacote + 1 byte para flag de fim
+#define HEADER_SIZE 5 
 #define TIMEOUT_MS 1000
 
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
@@ -118,11 +118,9 @@ void send_file(int sockfd, struct sockaddr_in client_addr, const char *filename,
     }
     long file_size = file_stat.st_size;
 
-    // Calcular MD5 antes de enviar
     char md5sum[MD5_DIGEST_LENGTH*2 + 1];
     calculate_md5(full_path, md5sum);
 
-    // Enviar metadados primeiro (tamanho e MD5)
     char meta_buffer[sizeof(long) + MD5_DIGEST_LENGTH*2 + 1];
     memcpy(meta_buffer, &file_size, sizeof(long));
     memcpy(meta_buffer + sizeof(long), md5sum, MD5_DIGEST_LENGTH*2 + 1);
@@ -144,7 +142,7 @@ void send_file(int sockfd, struct sockaddr_in client_addr, const char *filename,
               (struct sockaddr *)&client_addr, sizeof(client_addr));
         
         packet_counter++;
-        usleep(1000); // Pequena pausa para evitar congestionamento
+        usleep(1000); 
     }
 
     clock_gettime(CLOCK_MONOTONIC, &end);

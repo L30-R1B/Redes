@@ -71,7 +71,6 @@ void calculate_md5(const char *filename, char *md5sum) {
 }
 
 void receive_file(int sockfd, const char *filename, const char *server_ip) {
-    // Receber metadados (tamanho e MD5)
     char meta_buffer[sizeof(long) + MD5_DIGEST_LENGTH*2 + 1];
     int n = recv(sockfd, meta_buffer, sizeof(meta_buffer), 0);
     if (n <= 0) {
@@ -79,7 +78,6 @@ void receive_file(int sockfd, const char *filename, const char *server_ip) {
         return;
     }
 
-    // Verificar se é mensagem de erro
     if (strncmp(meta_buffer, "ERRO:", 5) == 0) {
         printf("%s\n", meta_buffer);
         return;
@@ -92,7 +90,6 @@ void receive_file(int sockfd, const char *filename, const char *server_ip) {
 
     printf("Recebendo arquivo '%s' (%ld bytes)...\n", filename, file_size);
 
-    // Criar diretórios se necessário
     char *last_slash = strrchr(filename, '/');
     if (last_slash != NULL) {
         char path[256];
@@ -139,7 +136,7 @@ void receive_file(int sockfd, const char *filename, const char *server_ip) {
             }
         }
 
-        timeout_counter = 0; // Reset counter on successful receive
+        timeout_counter = 0;
         
         size_t bytes_written = fwrite(buffer, 1, n, file);
         if (bytes_written != n) {
@@ -215,9 +212,8 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    // Configurar timeout para operações de socket
     struct timeval timeout;
-    timeout.tv_sec = 5;  // 5 segundos
+    timeout.tv_sec = 5;
     timeout.tv_usec = 0;
     
     if (setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout)) < 0) {

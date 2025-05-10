@@ -107,11 +107,9 @@ void send_file(int sockfd, const char *filename, const char *client_ip) {
     }
     long file_size = file_stat.st_size;
 
-    // Calcular MD5 antes de enviar
     char md5sum[MD5_DIGEST_LENGTH*2 + 1];
     calculate_md5(full_path, md5sum);
 
-    // Enviar metadados primeiro (tamanho e MD5)
     char meta_buffer[sizeof(long) + MD5_DIGEST_LENGTH*2 + 1];
     memcpy(meta_buffer, &file_size, sizeof(long));
     memcpy(meta_buffer + sizeof(long), md5sum, MD5_DIGEST_LENGTH*2 + 1);
@@ -261,19 +259,16 @@ int main(int argc, char *argv[]) {
         inet_ntop(AF_INET, &(address.sin_addr), client_ip, INET_ADDRSTRLEN);
         printf("Nova conexão de %s\n", client_ip);
 
-        // Criar um processo filho para lidar com o cliente
         pid_t pid = fork();
         if (pid == 0) {
-            // Processo filho
-            close(server_fd);  // O filho não precisa do socket de escuta
+            close(server_fd);
             handle_client(new_socket, client_ip);
             exit(0);
         } else if (pid < 0) {
             perror("fork");
             close(new_socket);
         } else {
-            // Processo pai
-            close(new_socket);  // O pai não precisa do socket do cliente
+            close(new_socket);
         }
     }
 

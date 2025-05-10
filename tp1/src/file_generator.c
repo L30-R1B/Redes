@@ -4,7 +4,7 @@
 #include <time.h>
 
 char random_char() {
-    return ' ' + (rand() % 95);  // Caracteres ASCII de ' ' (32) até '~' (126)
+    return ' ' + (rand() % 95);
 }
 
 int main(int argc, char *argv[]) {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    srand(time(NULL));  // Inicializa semente para números aleatórios
+    srand(time(NULL));
 
     for (int N = 1; N <= max_n; N++) {
         char filename[64];

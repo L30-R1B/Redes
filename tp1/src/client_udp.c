@@ -83,13 +83,11 @@ void calculate_md5(const char *filename, char *md5sum) {
 }
 
 void receive_file(int sockfd, struct sockaddr_in server_addr, const char *filename, const char *server_ip) {
-    // Configurar timeout
     struct timeval tv;
     tv.tv_sec = TIMEOUT_MS / 1000;
     tv.tv_usec = (TIMEOUT_MS % 1000) * 1000;
     setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
 
-    // Receber metadados (tamanho e MD5)
     char meta_buffer[sizeof(long) + MD5_DIGEST_LENGTH*2 + 1];
     struct sockaddr_in from_addr;
     socklen_t from_len = sizeof(from_addr);
@@ -101,7 +99,6 @@ void receive_file(int sockfd, struct sockaddr_in server_addr, const char *filena
         return;
     }
 
-    // Verificar se é mensagem de erro
     if (strncmp(meta_buffer, "ERRO:", 5) == 0) {
         printf("%s\n", meta_buffer);
         return;
@@ -114,7 +111,6 @@ void receive_file(int sockfd, struct sockaddr_in server_addr, const char *filena
 
     printf("Recebendo arquivo '%s' (%ld bytes)...\n", filename, file_size);
 
-    // Criar diretórios se necessário
     char *last_slash = strrchr(filename, '/');
     if (last_slash != NULL) {
         char path[256];
@@ -155,7 +151,6 @@ void receive_file(int sockfd, struct sockaddr_in server_addr, const char *filena
             continue;
         }
 
-        // Verificar se já recebemos este pacote
         int already_received = 0;
         for (int i = 0; i < total_packets_received; i++) {
             if (received_packets[i].packet_number == packet.packet_number) {
@@ -165,7 +160,6 @@ void receive_file(int sockfd, struct sockaddr_in server_addr, const char *filena
         }
 
         if (!already_received) {
-            // Armazenar pacote
             received_packets[total_packets_received] = packet;
             total_packets_received++;
             packets_received++;
@@ -178,7 +172,6 @@ void receive_file(int sockfd, struct sockaddr_in server_addr, const char *filena
 
     clock_gettime(CLOCK_MONOTONIC, &end);
     
-    // Ordenar pacotes por número
     for (int i = 0; i < total_packets_received - 1; i++) {
         for (int j = i + 1; j < total_packets_received; j++) {
             if (received_packets[i].packet_number > received_packets[j].packet_number) {
@@ -189,7 +182,6 @@ void receive_file(int sockfd, struct sockaddr_in server_addr, const char *filena
         }
     }
 
-    // Escrever arquivo
     for (int i = 0; i < total_packets_received; i++) {
         size_t bytes_to_write = (i == total_packets_received - 1) ? 
                               (file_size % BUFFER_SIZE) : BUFFER_SIZE;
