@@ -1,6 +1,6 @@
 # Script de Testes Comparativos: TCP vs UDP
 
-## `test_protocols.sh`
+## `test.sh`
 
 ### Descrição
 Este script automatizado realiza testes comparativos entre os protocolos TCP e UDP para transferência de arquivos, gerando relatórios detalhados de desempenho.
@@ -14,7 +14,7 @@ Este script automatizado realiza testes comparativos entre os protocolos TCP e U
 
 ### Como Executar
 ```bash
-./test_protocols.sh <MAX_N> <CHUNK_SIZE> <NUM_TESTS>
+./test.sh <MAX_N> <CHUNK_SIZE> <NUM_TESTS>
 ```
 
 ### Parâmetros
@@ -75,7 +75,7 @@ Para cada transferência:
 ### Exemplo de Uso
 ```bash
 # Testar com 5 arquivos (1KB a 5KB), 3 repetições
-./test_protocols.sh 5 1024 3
+./test.sh 5 1024 3
 ```
 
 ### Saída Esperada
