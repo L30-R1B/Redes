@@ -1,5 +1,3 @@
-+++ b/home/leonardo/Redes/tp2/README.md
-@@ -0,0 +1,167 @@
 +# Projeto de Comparativo de Desempenho de Servidores Web em C
 +
 +Este projeto implementa e testa diferentes modelos de concorrência para servidores web simples escritos em C. O objetivo principal é comparar o desempenho desses modelos sob diversas cargas de requisição e níveis de concorrência.
