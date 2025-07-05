@@ -1,0 +1,235 @@
+Compilando o projeto...
+rm -f client server *.o received_file.txt original_file.txt
+gcc -Wall -std=c11 -g -O2 -c -o client.o client.c
+gcc -Wall -std=c11 -g -O2 -o client client.o -lrt
+gcc -Wall -std=c11 -g -O2 -c -o server.o server.c
+gcc -Wall -std=c11 -g -O2 -o server server.o
+Criando arquivo de teste de 100KB...
+100+0 records in
+100+0 records out
+102400 bytes (102 kB, 100 KiB) copied, 0,000621692 s, 165 MB/s
+
+======================================================
+Iniciando teste com taxa de perda de 0%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 0.004 segundos
+Total de pacotes enviados (dados + controle): 102
+Total de retransmissões: 0
+Taxa de transferência efetiva: 23641.79 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 5%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 8.192 segundos
+Total de pacotes enviados (dados + controle): 110
+Total de retransmissões: 8
+Taxa de transferência efetiva: 12.21 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 10%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 9.230 segundos
+Total de pacotes enviados (dados + controle): 111
+Total de retransmissões: 9
+Taxa de transferência efetiva: 10.83 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 15%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 22.511 segundos
+Total de pacotes enviados (dados + controle): 124
+Total de retransmissões: 22
+Taxa de transferência efetiva: 4.44 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 20%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 22.524 segundos
+Total de pacotes enviados (dados + controle): 124
+Total de retransmissões: 22
+Taxa de transferência efetiva: 4.44 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 25%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 44.030 segundos
+Total de pacotes enviados (dados + controle): 145
+Total de retransmissões: 43
+Taxa de transferência efetiva: 2.27 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 30%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 28.670 segundos
+Total de pacotes enviados (dados + controle): 130
+Total de retransmissões: 28
+Taxa de transferência efetiva: 3.49 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 35%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 58.365 segundos
+Total de pacotes enviados (dados + controle): 159
+Total de retransmissões: 57
+Taxa de transferência efetiva: 1.71 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 40%
+======================================================
+
+--- Estatísticas do Cliente ---
+Arquivo: original_file.txt (102400 bytes)
+Tempo total de transferência: 62.461 segundos
+Total de pacotes enviados (dados + controle): 163
+Total de retransmissões: 61
+Taxa de transferência efetiva: 1.60 KB/s
+--------------------------------
+
+Resultado do Teste: [0;32mSUCESSO[0m
+
+======================================================
+Iniciando teste com taxa de perda de 45%
+======================================================
+Erro: Falha ao enviar pacote com seq=0 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 50%
+======================================================
+Erro: Falha ao enviar pacote com seq=0 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 55%
+======================================================
+Erro: Falha ao enviar pacote com seq=0 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 60%
+======================================================
+Erro: Falha ao enviar pacote com seq=0 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 65%
+======================================================
+Erro: Falha ao enviar pacote com seq=0 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 70%
+======================================================
+Erro: Falha ao enviar pacote com seq=0 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 75%
+======================================================
+Erro: Falha ao enviar pacote com seq=1 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 80%
+======================================================
+Erro: Falha ao enviar pacote com seq=0 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 85%
+======================================================
+Erro: Falha ao enviar pacote com seq=1 após 5 tentativas. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 90%
+======================================================
+Erro: Servidor não respondeu ao START. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 95%
+======================================================
+Erro: Servidor não respondeu ao START. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+======================================================
+Iniciando teste com taxa de perda de 100%
+======================================================
+Erro: Servidor não respondeu ao START. Abortando.
+
+
+Resultado do Teste: [0;31mFALHOU[0m
+
+Executando limpeza...
+Limpeza concluída.
